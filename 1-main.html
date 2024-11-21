@@ -28,7 +28,7 @@
             max-width: 1200px;
         }
 
-        .welcome, .about_me, .project_link, .other_links, .stats {
+        .welcome, .about_me, .project_link, .other_links {
             padding: 10px 20px;
             color: aliceblue;
             border-radius: 10px;
@@ -53,7 +53,7 @@
             gap: 10px;
         }
 
-        .other_links, .stats {
+        .other_links {
             flex: 0 1 auto;
             position: relative;
             cursor: pointer;
@@ -62,7 +62,7 @@
             border: solid 1px transparent;
         }
 
-        .other_links:hover, .stats:hover {
+        .other_links:hover {
             background-color: rgb(73, 4, 4);
             border: solid 1px red;
         }
@@ -74,14 +74,14 @@
         }
 
         /* Tooltip and emoji animations remain the same as in original */
-        .other_links span, .stats span {
+        .other_links span {
             cursor: pointer;
             display: inline-block;
             position: relative;
             transition: 0.8s;
         }
 
-        .other_links span:after, .stats span:after {
+        .other_links span:after {
             content: '';
             position: absolute;
             opacity: 0;
@@ -93,13 +93,12 @@
         .muffin span:after { content: '🧁'; }
         .col span:after { content: '🤖'; }
         .error404 span:after { content: '🏗️'; }
-        .stats span:after { content: '⚙️'; }
 
-        .other_links:hover span, .stats:hover span {
+        .other_links:hover span, {
             padding-right: 30px;
         }
 
-        .other_links:hover span:after, .stats:hover span:after {
+        .other_links:hover span:after {
             opacity: 1;
             right: 0;
         }
@@ -134,7 +133,7 @@
             border-color: transparent transparent #9c0808 transparent;
         }
 
-        .other_links:hover .tooltip, .stats:hover .tooltip {
+        .other_links:hover .tooltip {
             visibility: visible;
             opacity: 1;
         }
@@ -154,7 +153,7 @@
                 align-items: center;
             }
 
-            .other_links, .stats {
+            .other_links {
                 width: 100%;
                 max-width: 300px;
             }
@@ -171,11 +170,7 @@
         <header>
             <div class="welcome" id="welcomeText">
                 Welcome to my website
-            </div>
-            <button class="stats" onclick="redirectToStats()">
-                <span id="statsText">Server</span>
-                <div class="tooltip" id="statsTooltip">See the server stats or inofs.</div>
-            </button>   
+            </div>   
         </header>
         <div class="about_me" id="aboutMeText">
             About Me: Hello there! Call me Daniel, this is my website, I may not be the best developer but I try my best... Well, at least you found this page.😐
@@ -185,7 +180,7 @@
             <div class="project_section">
                 <button class="other_links muffin" onclick="redirectToMuffinLM()">
                     <span id="muffinText">MuffinLM</span>
-                    <div class="tooltip" id="muffinTooltip">MuffinLM, (also called as Muffin Language Model or MLM) is an AI text generator.</div>
+                    <div class="tooltip" id="muffinTooltip">Page under construction. MuffinLM, (also called as Muffin Language Model or MLM) is an AI text generator.</div>
                 </button>
                 <button class="other_links col" onclick="redirectToCOL()">
                     <span id="colText">COL-Project</span>
@@ -201,17 +196,14 @@
 
     <script>
         function redirectToMuffinLM() {
-            window.location.href = 'muffinlm.html';
+            window.location.href = 'https://';
         }
         function redirectToCOL() {
             window.location.href = 'https://github.com/FlameF0X/COL-project';
         }          
         function redirectTo404() {
-            window.location.href = '404.html';
+            window.location.href = 'https://';
         }
-        function redirectToStats() {
-            window.location.href = 'stats.html';
-        }  
     </script>
 </body>
 </html>
